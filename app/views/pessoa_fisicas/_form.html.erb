@@ -1,0 +1,8 @@
+<%= simple_form_for @pessoa_fisica do |f| %>
+  <%= f.input :cpf %>
+  <%= f.input :nome %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                pessoa_fisicas_path, :class => 'btn btn-default' %>
+<% end %>
