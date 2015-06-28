@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :pessoa_fisicas
   resources :pessoa_juridicas
+
+  root 'pessoa_juridicas#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
