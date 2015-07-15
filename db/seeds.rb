@@ -9,33 +9,40 @@
 pessoas_fisicas = PessoaFisica.create!([
 	{
 		cpf: '435.671.160-29',
-		nome: 'Zequinha da Silva'
+		nome: 'Zequinha da Silva',
+		status: true
 	},
 	{
 		cpf: '412.921.771-28',
-		nome: 'Zéfinha da Silva'
+		nome: 'Zéfinha da Silva',
+		status: true
 	},
 	{
 		cpf: '780.298.723-72',
-		nome: 'Maricota da Silva'
+		nome: 'Maricota da Silva',
+		status: true
 	},
 ])
 
 pessoas_juridicas = PessoaJuridica.create!([
 	{
 		cnpj: '64.776.683/0001-56',
-		razao_social: 'Apple'
+		razao_social: 'Apple',
+		status: true
 	},
 	{
 		cnpj: '51.662.852/0001-85',
-		razao_social: 'Microsoft'
+		razao_social: 'Microsoft',
+		status: true
 	},
 	{
 		cnpj: '70.818.366/0001-58',
-		razao_social: 'Toinho Variedades'
+		razao_social: 'Toinho Variedades',
+		status: true
 	},
 	{
 		cnpj: '47.818.368/0001-25',
-		razao_social: 'Walmart'
+		razao_social: 'Walmart',
+		status: true
 	}
 ])

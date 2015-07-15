@@ -6,6 +6,7 @@ class CreatePessoas < ActiveRecord::Migration
       t.string :cnpj
       t.string :nome
       t.string :razao_social
+      t.boolean :status
 
       t.timestamps null: false
     end

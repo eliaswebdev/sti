@@ -69,6 +69,6 @@ class PessoaFisicasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pessoa_fisica_params
-      params[:pessoa_fisica]
+      params.require(:pessoa_fisica).permit(:cpf, :nome, :status)
     end
 end

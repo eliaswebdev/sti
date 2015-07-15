@@ -1,0 +1,11 @@
+<%= simple_form_for @caminhao, :html => { :class => 'form-horizontal' } do |f| %>
+  
+  <%= f.input :nome %>
+  <%= error_span(@caminhao[:nome]) %>
+  <%= f.input :placa %>
+  <%= error_span(@caminhao[:placa]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                caminhoes_path, :class => 'btn btn-default' %>
+<% end %>

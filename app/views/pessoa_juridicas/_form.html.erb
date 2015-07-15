@@ -1,8 +1,8 @@
 <%= simple_form_for @pessoa_juridica do |f| %>
+
   <%= f.input :cnpj %>
-  <%= error_span(@pessoa_juridica[:cnpj]) %>
   <%= f.input :razao_social %>
-  <%= error_span(@pessoa_juridica[:razao_social]) %>
+  <%= f.input :status, as: :radio_buttons, collection: [['Active', true], ['Inactive', false]] %>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

@@ -69,6 +69,6 @@ class PessoaJuridicasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pessoa_juridica_params
-      params[:pessoa_juridica]
+      params.require(:pessoa_juridica).permit(:cnpj, :razao_social, :status)
     end
 end

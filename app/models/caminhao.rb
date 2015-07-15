@@ -1,0 +1,3 @@
+class Caminhao < Veiculo
+
+end

@@ -1,0 +1,11 @@
+<%= simple_form_for @motocicleta, :html => { :class => 'form-horizontal' } do |f| %>
+ 
+  <%= f.input :nome %>
+  <%= error_span(@motocicleta[:nome]) %>
+  <%= f.input :placa %>
+  <%= error_span(@motocicleta[:placa]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                motocicletas_path, :class => 'btn btn-default' %>
+<% end %>

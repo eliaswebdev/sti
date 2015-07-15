@@ -1,0 +1,3 @@
+class Motocicleta < Veiculo
+
+end
