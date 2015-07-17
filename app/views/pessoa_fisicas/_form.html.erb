@@ -1,6 +1,19 @@
-<%= simple_form_for @pessoa_fisica do |f| %>
-  <%= f.input :cpf %>
-  <%= f.input :nome %>
+<%= simple_nested_form_for @pessoa_fisica do |f| %>
+	<%= f.input :nome %>
+	<%= f.input :cpf %>
+	
+	<fieldset>
+		<legend>Dependentes</legend>
+
+		<%= f.fields_for :dependentes do |dependente_form| %>
+		<div class="well well-sm">
+		  <%= dependente_form.link_to_remove "Remover dependente", class: 'btn btn-danger btn-xs pull-right' %>
+		  <%= dependente_form.input :nome %>
+		  <%= dependente_form.input :cpf %>
+		</div>
+		<% end %>
+		<p><%= f.link_to_add "Adicionar Dependente", :dependentes, class: 'btn btn-success btn-lg btn-block' %></p>  
+	</fieldset>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

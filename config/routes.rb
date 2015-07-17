@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :pessoa_fisicas, path: :pessoas_fisicas
   resources :pessoa_juridicas, path: :pessoas_juridicas
+  resources :dependentes
   resources :carros
   resources :motocicletas
   resources :bicicletas

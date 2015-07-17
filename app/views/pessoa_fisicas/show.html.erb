@@ -8,6 +8,15 @@
   <dd><%= @pessoa_fisica.cpf %></dd>
   <dt><strong><%= model_class.human_attribute_name(:nome) %>:</strong></dt>
   <dd><%= @pessoa_fisica.nome %></dd>
+
+  <dt><strong><%= model_class.human_attribute_name(:dependentes) %>:</strong></dt>
+  <dd>
+    <ol>
+      <% @pessoa_fisica.dependentes.each do |dependente| %>
+      <li><%= dependente.nome %></li>
+      <% end %>
+    </ol>
+  </dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

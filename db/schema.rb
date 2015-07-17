@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150715121920) do
+ActiveRecord::Schema.define(version: 20150717114204) do
 
   create_table "pessoas", force: :cascade do |t|
     t.string   "type"
@@ -20,9 +20,12 @@ ActiveRecord::Schema.define(version: 20150715121920) do
     t.string   "nome"
     t.string   "razao_social"
     t.boolean  "status"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "pessoa_fisica_id"
   end
+
+  add_index "pessoas", ["pessoa_fisica_id"], name: "index_pessoas_on_pessoa_fisica_id"
 
   create_table "veiculos", force: :cascade do |t|
     t.string   "type"
